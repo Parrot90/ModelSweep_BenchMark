@@ -8,7 +8,8 @@ A GUI-first evaluation workbench for local LLMs running on Ollama. Build persona
 
 ## Screenshot
 
-![ModelSweep](screenshots/main.png)
+![ModelSweep](<img width="1912" height="934" alt="image" src="https://github.com/user-attachments/assets/fb784fe2-0d4d-438b-8a28-40f39ff60b68" />
+)
 
 > Drop your screenshot into a `screenshots/` folder.
 
