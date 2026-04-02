@@ -1,0 +1,18 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "executionArgs": {
+    "projectName": "app",
+    "projectPath": "c:\\Users\\Ayush\\Desktop\\ModelSweep\\app",
+    "testIds": [],
+    "additionalInstruction": "",
+    "serverMode": "development",
+    "envs": {
+      "API_KEY": "sk-user-nlt6HovVM5CjC11IFEbuTEQEjNGkXBXtZcjeSpn6T5GHyFtIwdFDclxsN2urug0qvQoiWvS6o8fgNoPNtIYjghAMIaR6wFvQL3rcZ_arBz5_WZYtOAWC0LLL3NbiF4063BM"
+    }
+  },
+  "serverPort": 64991,
+  "proxy": "http://89472904-567a-4ffd-9f94-eaef8cf7a541:a0fNnpwaCnUr2zPVeVWRf1IWrlEboHGe@tun.testsprite.com:8080"
+}

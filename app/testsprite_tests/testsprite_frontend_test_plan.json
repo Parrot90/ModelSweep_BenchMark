@@ -1,0 +1,775 @@
+[
+  {
+    "id": "TC001",
+    "title": "Navigate between main modules and verify active content updates",
+    "description": "Ensures the global navigation lets users move between key modules and each destination shows its primary content.",
+    "category": "Global Navigation",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view test suites"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view results"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify evaluation results content is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Navigate to Models module from dashboard",
+    "description": "Verifies the global navigation can take the user to the models module and primary content loads.",
+    "category": "Global Navigation",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view models"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a models list or models overview content is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Navigate to Playground module from dashboard",
+    "description": "Verifies the global navigation can take the user to the playground and the interactive area loads.",
+    "category": "Global Navigation",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to open the playground"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the playground interactive content is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Navigate to Settings module from dashboard",
+    "description": "Verifies the global navigation can take the user to settings and settings content loads.",
+    "category": "Global Navigation",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to open settings"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify application settings content is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Navigate to Community module from dashboard",
+    "description": "Verifies the global navigation can take the user to community features and the page loads primary content.",
+    "category": "Global Navigation",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to open community"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify community content is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Submit a prompt in the playground and see a response",
+    "description": "Verifies a user can enter a prompt, select a model, submit, and see a generated response appear.",
+    "category": "Playground (Interactive Model Testing)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /playground"
+      },
+      {
+        "type": "action",
+        "description": "Fill a short prompt into the prompt input"
+      },
+      {
+        "type": "action",
+        "description": "Select an available model from the model selector"
+      },
+      {
+        "type": "action",
+        "description": "Submit the prompt"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a model response is displayed in the playground"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Playground shows an error when submitting without a prompt",
+    "description": "Verifies the playground prevents submission when the prompt is empty and surfaces a validation error.",
+    "category": "Playground (Interactive Model Testing)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /playground"
+      },
+      {
+        "type": "action",
+        "description": "Ensure the prompt input is empty"
+      },
+      {
+        "type": "action",
+        "description": "Select an available model from the model selector"
+      },
+      {
+        "type": "action",
+        "description": "Submit the prompt"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a prompt validation error is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Playground prevents submission when no model is selected",
+    "description": "Verifies the playground requires a model selection before a prompt can be submitted.",
+    "category": "Playground (Interactive Model Testing)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /playground"
+      },
+      {
+        "type": "action",
+        "description": "Fill a short prompt into the prompt input"
+      },
+      {
+        "type": "action",
+        "description": "Clear the model selection if a model is preselected"
+      },
+      {
+        "type": "action",
+        "description": "Submit the prompt"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a model selection validation error is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Playground response updates when submitting a second prompt",
+    "description": "Verifies a user can run multiple prompts sequentially and see the latest response update accordingly.",
+    "category": "Playground (Interactive Model Testing)",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /playground"
+      },
+      {
+        "type": "action",
+        "description": "Select an available model from the model selector"
+      },
+      {
+        "type": "action",
+        "description": "Fill the prompt input with First prompt for TC004"
+      },
+      {
+        "type": "action",
+        "description": "Submit the prompt"
+      },
+      {
+        "type": "action",
+        "description": "Fill the prompt input with Second prompt for TC004"
+      },
+      {
+        "type": "action",
+        "description": "Submit the prompt"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the latest displayed response corresponds to the most recent prompt submission"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Playground allows long prompt entry without breaking submission",
+    "description": "Verifies the prompt input accepts a longer prompt and submission still produces a response.",
+    "category": "Playground (Interactive Model Testing)",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /playground"
+      },
+      {
+        "type": "action",
+        "description": "Select an available model from the model selector"
+      },
+      {
+        "type": "action",
+        "description": "Fill a long multi-sentence prompt into the prompt input"
+      },
+      {
+        "type": "action",
+        "description": "Submit the prompt"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a model response is displayed in the playground"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Playground can be loaded directly and shows primary controls",
+    "description": "Verifies the playground page loads and the primary prompt and model controls are present.",
+    "category": "Playground (Interactive Model Testing)",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /playground"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the prompt input is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the model selector is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Start a suite run and observe the live execution pipeline, then navigate to results to replay",
+    "description": "Verifies the end-to-end workflow of starting a run from suite, seeing live pipeline updates, then replaying from results.",
+    "category": "Live Execution & Pipeline Visualizations",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /suite"
+      },
+      {
+        "type": "action",
+        "description": "Start a run"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a live execution pipeline visualization is displayed"
+      },
+      {
+        "type": "action",
+        "description": "Click the navigation to view results"
+      },
+      {
+        "type": "action",
+        "description": "Select the most recent run"
+      },
+      {
+        "type": "action",
+        "description": "Start pipeline replay"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the pipeline visualization is displayed during replay"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Suite page loads and allows starting a run",
+    "description": "Verifies the suite page loads its primary run action and the user can initiate execution.",
+    "category": "Live Execution & Pipeline Visualizations",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /suite"
+      },
+      {
+        "type": "action",
+        "description": "Start a run"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify live run status updates are displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Live pipeline shows progress indicators during a run",
+    "description": "Verifies that starting a run results in observable pipeline status/progress updates in the UI.",
+    "category": "Live Execution & Pipeline Visualizations",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /suite"
+      },
+      {
+        "type": "action",
+        "description": "Start a run"
+      },
+      {
+        "type": "action",
+        "description": "Wait for pipeline updates to appear"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify at least one pipeline step shows a non-idle status"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Replay controls are available on a run details view",
+    "description": "Verifies that a completed run can be opened in results and exposes a replay capability for the pipeline visualization.",
+    "category": "Live Execution & Pipeline Visualizations",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /results"
+      },
+      {
+        "type": "action",
+        "description": "Select a completed run"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify pipeline replay controls are visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a pipeline visualization area is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "Results dashboard shows charts for a selected completed run and allows JSON export",
+    "description": "Verifies selecting a completed run displays key charts and enables exporting results as JSON.",
+    "category": "Results Dashboard & Export",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /results"
+      },
+      {
+        "type": "action",
+        "description": "Select a completed run"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify radar chart data is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify heatmap and score distribution data are displayed"
+      },
+      {
+        "type": "action",
+        "description": "Open the export options"
+      },
+      {
+        "type": "action",
+        "description": "Choose JSON export"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an export output preview or confirmation is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Incomplete run shows partial data and disables export",
+    "description": "Verifies selecting an incomplete run shows partial/limited results and the export option is not available.",
+    "category": "Results Dashboard & Export",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /results"
+      },
+      {
+        "type": "action",
+        "description": "Select an incomplete run"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify partial results data is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify export is disabled or unavailable"
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "Results page loads and lists available runs",
+    "description": "Verifies the results page loads and presents a list or selector of runs to view.",
+    "category": "Results Dashboard & Export",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /results"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a list or selector of runs is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC019",
+    "title": "Switching between two runs updates the dashboard data",
+    "description": "Verifies selecting a different run updates the displayed charts/metrics accordingly.",
+    "category": "Results Dashboard & Export",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /results"
+      },
+      {
+        "type": "action",
+        "description": "Select a completed run"
+      },
+      {
+        "type": "action",
+        "description": "Capture the currently displayed run identifier or title shown on the page"
+      },
+      {
+        "type": "action",
+        "description": "Select a different completed run"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the displayed run identifier or title changes to the newly selected run"
+      }
+    ]
+  },
+  {
+    "id": "TC020",
+    "title": "Export menu presents multiple export formats",
+    "description": "Verifies the export UI offers multiple formats to the user on a completed run.",
+    "category": "Results Dashboard & Export",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /results"
+      },
+      {
+        "type": "action",
+        "description": "Select a completed run"
+      },
+      {
+        "type": "action",
+        "description": "Open the export options"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify multiple export format options are displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC021",
+    "title": "Save Settings changes (Ollama URL and scoring weights)",
+    "description": "Verifies that updating settings values can be saved and a success confirmation is shown.",
+    "category": "Settings & Integrations",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid Ollama URL into the Ollama connection URL field"
+      },
+      {
+        "type": "action",
+        "description": "Adjust at least one scoring weight value to a different valid value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the settings form to save changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC022",
+    "title": "Prevent saving cloud judge provider without API key",
+    "description": "Verifies validation blocks saving when a cloud judge provider is selected without providing an API key.",
+    "category": "Settings & Integrations",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Select a cloud judge provider in the judge configuration section"
+      },
+      {
+        "type": "action",
+        "description": "Ensure the API key field is empty"
+      },
+      {
+        "type": "action",
+        "description": "Submit the settings form to save changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a validation error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify settings are not saved"
+      }
+    ]
+  },
+  {
+    "id": "TC023",
+    "title": "Reject invalid Ollama URL format",
+    "description": "Verifies an invalid Ollama URL cannot be saved and a validation error is shown.",
+    "category": "Settings & Integrations",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Fill an invalid URL into the Ollama connection URL field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the settings form to save changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a URL validation error is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC024",
+    "title": "Reject out-of-range scoring weights",
+    "description": "Verifies scoring weights outside allowed range trigger validation and block saving.",
+    "category": "Settings & Integrations",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "action",
+        "description": "Fill an out-of-range value into a scoring weight field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the settings form to save changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a scoring weight validation error is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC025",
+    "title": "Settings page loads primary configuration sections",
+    "description": "Verifies the settings page renders core sections needed to configure integrations and scoring.",
+    "category": "Settings & Integrations",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /settings"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify Ollama connection settings are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify judge provider configuration is displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC026",
+    "title": "Import a public suite from Community into local Suites",
+    "description": "Verifies importing a community shared suite results in the suite being available in the local suites page.",
+    "category": "Community Browser",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /community"
+      },
+      {
+        "type": "action",
+        "description": "Browse the list of shared suites"
+      },
+      {
+        "type": "action",
+        "description": "Select a public shared suite card"
+      },
+      {
+        "type": "action",
+        "description": "Trigger import of the selected suite into local suites"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view local suites"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the imported suite is displayed in the suites list"
+      }
+    ]
+  },
+  {
+    "id": "TC027",
+    "title": "Show import error for incompatible or invalid community suite",
+    "description": "Verifies that attempting to import a suite that is incompatible or invalid shows an import error state.",
+    "category": "Community Browser",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /community"
+      },
+      {
+        "type": "action",
+        "description": "Browse shared suites to find one marked as incompatible or invalid"
+      },
+      {
+        "type": "action",
+        "description": "Trigger import of the selected suite"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an import error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the suite is not added to local suites"
+      }
+    ]
+  },
+  {
+    "id": "TC028",
+    "title": "Community page loads shared suites and result cards",
+    "description": "Verifies the community browser page shows its primary browsing content.",
+    "category": "Community Browser",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /community"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify shared suites are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify shared result cards are displayed"
+      }
+    ]
+  },
+  {
+    "id": "TC029",
+    "title": "Import cancel or dismiss does not add suite",
+    "description": "Verifies that canceling out of an import flow does not change local suites.",
+    "category": "Community Browser",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /community"
+      },
+      {
+        "type": "action",
+        "description": "Select a public shared suite card"
+      },
+      {
+        "type": "action",
+        "description": "Start the import flow for the selected suite"
+      },
+      {
+        "type": "action",
+        "description": "Cancel or dismiss the import confirmation step"
+      },
+      {
+        "type": "action",
+        "description": "Click the link to view local suites"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the selected community suite was not added to the suites list"
+      }
+    ]
+  }
+]

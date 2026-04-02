@@ -1,0 +1,49 @@
+version: "2"
+type: frontend
+tech_stack:
+  - TypeScript
+  - Next.js (App Router)
+  - React
+  - Tailwind CSS
+  - Zustand
+  - Recharts
+routes:
+  - path: /
+    file: src/app/page.tsx
+    auth_required: false
+    description: Main dashboard page
+  - path: /community
+    file: src/app/community/page.tsx
+    auth_required: false
+    description: Community features page
+  - path: /models
+    file: src/app/models/page.tsx
+    auth_required: false
+    description: Models overview and selection
+  - path: /playground
+    file: src/app/playground/page.tsx
+    auth_required: false
+    description: Interactive playground for model testing
+  - path: /results
+    file: src/app/results/page.tsx
+    auth_required: false
+    description: View evaluation and benchmark results
+  - path: /settings
+    file: src/app/settings/page.tsx
+    auth_required: false
+    description: Application settings
+  - path: /suite
+    file: src/app/suite/page.tsx
+    auth_required: false
+    description: Managing and creating test suites
+features:
+  - name: Global Navigation
+    description: Standard layout wrapper with shared navigation
+    files:
+      - src/app/layout.tsx
+    entry_route: /
+    user_interactions:
+      - Navigate between main modules
+    api_calls: []
+    auth_required: false
+known_limitations: []
